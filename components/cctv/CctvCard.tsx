@@ -1,5 +1,6 @@
 import { CctvItem } from "@/types/cctv"
 import { CctvPlayer } from "./CctvPlayer"
+import { CctvPlayerIframe } from "./CctvPlayerIframe"
 
 type Props = {
   cctv: CctvItem
@@ -9,7 +10,8 @@ export function CctvCard({ cctv }: Props) {
   return (
     <div className="space-y-4">
       {/* VIDEO */}
-      <CctvPlayer url={cctv.streamUrl} />
+      <CctvPlayerIframe url={cctv.streamUrl} />
+      {/* <CctvPlayer url={cctv.streamUrl} /> */}
 
       {/* GOOGLE MAPS IFRAME */}
       <iframe
