@@ -5,15 +5,17 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card"
-import { Github } from "lucide-react"
+import { Github, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 
 export function InfoSourceCard() {
   return (
     <div className="space-y-4">
+      {/* GitHub */}
       <Button className="w-full flex items-center gap-2" asChild>
         <a
-          href="https://github.com/akmalirsyad"
+          href="https://github.com/AkmalIrsyad/cctv-bekasi"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -22,6 +24,7 @@ export function InfoSourceCard() {
         </a>
       </Button>
 
+      {/* Sumber Data */}
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Sumber Data</CardTitle>
@@ -53,6 +56,27 @@ export function InfoSourceCard() {
           <p className="text-xs">
             Data ditampilkan untuk tujuan informasi publik.
           </p>
+        </CardContent>
+      </Card>
+
+      {/* TECH STACK */}
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base flex items-center gap-2">
+            <Layers className="w-4 h-4" />
+            Tech Stack
+          </CardTitle>
+        </CardHeader>
+
+        <CardContent className="flex flex-wrap gap-2">
+          <Badge>Next.js (App Router)</Badge>
+          <Badge>React</Badge>
+          <Badge>TypeScript</Badge>
+          <Badge>Tailwind CSS</Badge>
+          <Badge>shadcn/ui</Badge>
+          <Badge>HLS / m3u8 online</Badge>
+          <Badge>Google Maps Embed</Badge>
+          <Badge>Vercel</Badge>
         </CardContent>
       </Card>
     </div>
